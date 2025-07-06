@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.imagem-cards {
+    width: 100%;
+    height: 50%;
+}
+
+#presentation {
+    height: 120vh;
+}
+
+video, canvas {
+    position: absolute;      
+    left: 30%;
+}
+
+.corTextoEscuro {
+    color: #1B2A41;
+}
+
+.corTextoClaro {
+    color: #00B4D8;
+}
+
+.corBackgroundClaro {
+    background-color: #E0F7FA;
+}
+
+.corBackgroundEscuro {
+    background-color: #1B2A41;
+    z-index: 1030;
+}
+
+@media only screen and (max-width: 600px) {
+#presentation {
+    height: 160vh;
+}
+video, canvas {
+    width: 80%;
+    left: 5%;
+}
+}

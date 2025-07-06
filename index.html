@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCC2 Gustavo</title>
+      <!-- TensorFlow.js -->
+  <script src="https://unpkg.com/@tensorflow/tfjs-core@3.7.0/dist/tf-core.js"></script>
+  <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@3.7.0/dist/tf-backend-webgl.js"></script>
+
+  <!-- Hand Pose Detection -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection@2.0.0/dist/hand-pose-detection.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.min.js"></script>
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg position-fixed top-0 w-100 corBackgroundEscuro">
+  <div class="container-fluid">
+    <a class="navbar-brand corTextoClaro" href="#">TCC 2</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link corTextoClaro" aria-current="page" href="#presentation">Sobre o projeto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link corTextoClaro" href="#cards">Funcionalidades e informações</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link corTextoClaro" href="#footer">Contato e Equipe</a>
+        </li>
+      <li class="nav-item corTextoClaro ms-auto d-flex align-items-center">
+                  Contagem de dias para a Defesa (focando dia 01/02/2026):  <span id="contagem"> 0</span>
+      </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+    <section id="presentation" class="mt-5 pt-2 corBackgroundClaro">
+      <h1 class="text-center fw-bold mt-3 corTextoEscuro">Desenvolvimento de um Sistema Multiplataforma Baseado em Reconhecimento de Gestos para Transferência de Arquivos Utilizando Tecnologias Web e Sistemas Distribuídos
+</h1>
+      
+      <h5 class="text-center bw-light mb-5 corTextoEscuro">Baseado no Huawei AI Air Transfer</h5>
+
+      <h2 class="fw-bold corTextoEscuro">Descrição do projeto:</h2>
+      <p class="p-1 corTextoEscuro">O presente projeto propõe o desenvolvimento de um sistema multiplataforma para transferência 
+        de arquivos via reconhecimento de gestos, inspirado em soluções como o AI Air Transfer da Huawei. 
+        A proposta central é permitir que usuários transfiram arquivos entre dispositivos (web, desktop e mobile) 
+        de forma intuitiva e sem contato físico direto, apenas com movimentos captados por câmeras.
+
+    <p class="p-1 corTextoEscuro">O sistema será desenvolvido utilizando Next.js, Electron e React Native, com a linguagem TypeScript 
+        como base, visando garantir alta performance, segurança e integração entre plataformas. Serão aplicados 
+        conceitos de sistemas distribuídos para gerenciar as conexões e trocas entre os dispositivos, bem como 
+        técnicas de visão computacional, com apoio de bibliotecas como MediaPipe ou TensorFlow.js, 
+        para reconhecer gestos pré-definidos de forma precisa.
+    </p>
+
+    <p class="p-1 corTextoEscuro">
+        Além de inovar na forma de interação com arquivos, o projeto também considera aspectos de acessibilidade, 
+        oferecendo uma alternativa tecnológica que pode beneficiar pessoas com limitações motoras ou em contextos 
+        onde o uso direto de periféricos é limitado.
+    
+    </p>
+
+    <p class="p-1 corTextoEscuro">
+        A iniciativa busca demonstrar como tecnologias modernas de front-end e inteligência artificial podem ser combinadas para
+         criar experiências mais naturais, eficientes e inclusivas, explorando o potencial de interfaces não convencionais em ambientes 
+         distribuídos.</p>
+
+    </p>
+
+    <h3>Demonstração:</h3>
+     <video id="video" width="640" height="480" autoplay="false"></video>
+  <canvas id="canvas" width="640" height="480"></canvas>
+    
+</section>
+<section id="cards" class=" p-5 corBackgroundEscuro">
+  <h2 class="fw-bold mb-4 corTextoClaro">Funcionalidades e Informações:</h2>
+
+  <div class=" row justify-content-center g-4 ">
+    <div class="col-md-3 ">
+      <div class="card h-100 corBackgroundClaro">
+        <img src="https://canada1.discourse-cdn.com/flex035/uploads/threejs/original/3X/7/b/7bac8036acaf18c709943629d168e96960435477.png" class="card-img-top imagem-cards" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title corTextoEscuro">Funcionalidades principais</h5>
+          <p class="card-text corTextoEscuro">Reconhecimento de gestos;</p>
+          <p class="card-text corTextoEscuro">Sistema multiplataforma;</p>
+          <p class="card-text corTextoEscuro">Transferência de arquivos;</p>
+          <p class="card-text corTextoEscuro">Transferência de arquivos via reconhecimento de gestos;</p>
+          <p class="card-text corTextoEscuro">Suporte a diferentes tipos de dados, como imagens, vídeos, pdfs e audios.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card h-100 corBackgroundClaro">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" class="card-img-top imagem-cards" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title corTextoEscuro">JavaScript</h5>
+          <p class="card-text corTextoEscuro">Tecnologias utilizadas</p>
+          <p class="card-text corTextoEscuro">Ecossistema baseado em TS/JS;</p>
+          <p class="card-text corTextoEscuro">Next.js para o aplicativo Web;</p>
+          <p class="card-text corTextoEscuro">Electron para o aplicativo Desktop;</p>
+          <p class="card-text corTextoEscuro">React Native para o aplicativo Mobile;</p>
+          <p class="card-text corTextoEscuro">Nest.js para o backend;</p>
+          <p class="card-text corTextoEscuro">Handpose / Fingerpose para reconhecimento de gestos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card h-100 corBackgroundClaro">
+        <img src="https://pt.quizur.com/_image?href=https://dev-beta.quizur.com/storage/v1/object/public//imagens//20484309/221df38d-702a-45ab-aa32-6a37b0ce2da9.png&w=600&h=600&f=webp" class="card-img-top imagem-cards" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title corTextoEscuro">Benefícios, impactos e diferenciais</h5>
+          <p class="card-text corTextoEscuro">Código aberto;</p>
+          <p class="card-text corTextoEscuro">Utilização de tecnologias de ponta;</p>
+          <p class="card-text corTextoEscuro">Diminui a necessidade de produtos de terceiros para transferência de arquivos entre diferentes plataformas;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="corBackgroundClaro text-center text-lg-start">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-10 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase corTextoEscuro">Informações sobre o autor</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <p class="corTextoEscuro">Nome: Gustavo Vaz Teixeira</p>
+          </li>
+          <li>
+            <p class="corTextoEscuro">Formação: Bachael em Ciência da Computação, cursando pós em Desenvolvimento Web e Mobile</p>
+          </li>
+          <li>
+            <p class="corTextoEscuro">Email para contato: guteixeira2001@gmail.com</p>
+          </li>
+
+        </ul>
+      </div>
+
+    
+    </div>
+  </div>
+
+</footer>
+    <script src="main.js"></script>
+    <script src="fingerpose.js"></script>
+  </body>
+</html>
